@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mitshoji.github.io/mitstream/blog/didntgowell/</loc>
+    <lastmod>2018-08-01T22:17:28+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mitshoji.github.io/mitstream/haskell/getstartwithhaskell/</loc>
     <lastmod>2018-08-01T20:23:44+09:00</lastmod>
   </url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>https://mitshoji.github.io/mitstream/blog/</loc>
-    <lastmod>2018-07-31T22:44:40+09:00</lastmod>
+    <lastmod>2018-08-01T22:17:28+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,7 +46,7 @@
   
   <url>
     <loc>https://mitshoji.github.io/mitstream/</loc>
-    <lastmod>2018-08-01T20:23:44+09:00</lastmod>
+    <lastmod>2018-08-01T22:17:28+09:00</lastmod>
     <priority>0</priority>
   </url>
   
