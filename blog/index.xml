@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on み</title>
+    <link>https://mitshoji.github.io/mitstream/blog/</link>
+    <description>Recent content in Blogs on み</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 31 Jul 2018 22:44:40 +0900</lastBuildDate>
+    
+	<atom:link href="https://mitshoji.github.io/mitstream/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>はじめる</title>
+      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
+      <pubDate>Tue, 31 Jul 2018 22:44:40 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
+      <description>日記を書こうと思います。</description>
+    </item>
+    
+  </channel>
+</rss>

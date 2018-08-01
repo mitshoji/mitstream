@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/haskell/getstartwithhaskell/</loc>
+    <lastmod>2018-08-01T20:23:44+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/blog/hello/</loc>
+    <lastmod>2018-07-31T22:44:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/about/</loc>
+    <lastmod>2018-07-31T22:23:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/blog/</loc>
+    <lastmod>2018-07-31T22:44:40+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/haskell/</loc>
+    <lastmod>2018-08-01T20:23:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/</loc>
+    <lastmod>2018-08-01T20:23:44+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

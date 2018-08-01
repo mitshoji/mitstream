@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>み</title>
+    <link>https://mitshoji.github.io/mitstream/</link>
+    <description>Recent content on み</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 01 Aug 2018 20:23:44 +0900</lastBuildDate>
+    
+	<atom:link href="https://mitshoji.github.io/mitstream/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Haskellをはじめよう</title>
+      <link>https://mitshoji.github.io/mitstream/haskell/getstartwithhaskell/</link>
+      <pubDate>Wed, 01 Aug 2018 20:23:44 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/haskell/getstartwithhaskell/</guid>
+      <description>Haskellはなぜクールなのか</description>
+    </item>
+    
+    <item>
+      <title>はじめる</title>
+      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
+      <pubDate>Tue, 31 Jul 2018 22:44:40 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
+      <description>日記を書こうと思います。</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://mitshoji.github.io/mitstream/about/</link>
+      <pubDate>Tue, 31 Jul 2018 22:23:04 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/about/</guid>
+      <description>#自己紹介
+mitstream:剣道して数学するおじさん。
+40歳は二度目のハタチ
+#座右の銘
+三度炊く飯さえ硬し軟かし 思うままにはならぬ世の中</description>
+    </item>
+    
+  </channel>
+</rss>
