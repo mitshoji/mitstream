@@ -6,10 +6,23 @@
     <description>Recent content on みみみ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 04 Aug 2018 05:42:13 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 06:02:55 +0900</lastBuildDate>
     
 	<atom:link href="https://mitshoji.github.io/mitstream/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>マークダウンが書けない？</title>
+      <link>https://mitshoji.github.io/mitstream/blog/20180803_diary/</link>
+      <pubDate>Sat, 04 Aug 2018 06:02:55 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/20180803_diary/</guid>
+      <description>見出し1 とか。
+見出し2 とか。
+==これはどうなる？
+&amp;mdash;&amp;mdash;これは？
+勉強しなくては。</description>
+    </item>
     
     <item>
       <title>本日の稽古-2018.08.02</title>
