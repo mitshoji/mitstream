@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mitshoji.github.io/mitstream/sword/20180804_keiko/</loc>
+    <lastmod>2018-08-05T15:23:52+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mitshoji.github.io/mitstream/blog/20180804_diary/</loc>
     <lastmod>2018-08-05T14:37:20+09:00</lastmod>
   </url>
@@ -56,7 +61,7 @@
   
   <url>
     <loc>https://mitshoji.github.io/mitstream/sword/</loc>
-    <lastmod>2018-08-04T05:42:13+09:00</lastmod>
+    <lastmod>2018-08-05T15:23:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -67,7 +72,7 @@
   
   <url>
     <loc>https://mitshoji.github.io/mitstream/</loc>
-    <lastmod>2018-08-05T14:37:20+09:00</lastmod>
+    <lastmod>2018-08-05T15:23:52+09:00</lastmod>
     <priority>0</priority>
   </url>
   
