@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="mitstream">
+<meta name="description" content="US Amazon.com で購入したChromebookが来た。予定より1周間も早く配送され、即配オプションを付けなくてむしろラッキー。
+ASUS C101PA CPU OP1, Made for Chromebooks, Hexa-core(Dual ARM® Cortex®-A72, Quad Cortex®-A53 big.LITTLE™ configuration) メインメモリ 4 GB 表示機能 10.1インチ LEDバックライト WXGA (1280x800) Touchscreen サイズ 幅262.8 mm×奥行き182.4 mm×高さ15.6 mm 質量 約0.9 kg とにかく安くて軽いものを、と思って探した品。日本で買うと35,000円くらいのようだが$250でGET。
+よーし、これにLinux入れて遊ぶぞー！と思っていたら、通常のGalliumOSが入らない。プロセッサの種類で対応できないOSがあるなんて知らなかった。
+GalliumOSはintel系メインなのに対し、今回買ったやつはARMなのでまた別のディストロが必要らしい。ARMと言えばRaspberry PiなのでもしかしたらRasbianが入るかもしれないが、それはそれで調べるのが面倒。なので簡単にLinuxが使える環境をもうちょっと調べます。とりあえずChromOSでは動いた。WiFiもつなげた（当然だが）">
+
+<meta property="og:title" content="Cromebookがきた" />
+<meta property="og:description" content="US Amazon.com で購入したChromebookが来た。予定より1周間も早く配送され、即配オプションを付けなくてむしろラッキー。
+ASUS C101PA CPU OP1, Made for Chromebooks, Hexa-core(Dual ARM® Cortex®-A72, Quad Cortex®-A53 big.LITTLE™ configuration) メインメモリ 4 GB 表示機能 10.1インチ LEDバックライト WXGA (1280x800) Touchscreen サイズ 幅262.8 mm×奥行き182.4 mm×高さ15.6 mm 質量 約0.9 kg とにかく安くて軽いものを、と思って探した品。日本で買うと35,000円くらいのようだが$250でGET。
+よーし、これにLinux入れて遊ぶぞー！と思っていたら、通常のGalliumOSが入らない。プロセッサの種類で対応できないOSがあるなんて知らなかった。
+GalliumOSはintel系メインなのに対し、今回買ったやつはARMなのでまた別のディストロが必要らしい。ARMと言えばRaspberry PiなのでもしかしたらRasbianが入るかもしれないが、それはそれで調べるのが面倒。なので簡単にLinuxが使える環境をもうちょっと調べます。とりあえずChromOSでは動いた。WiFiもつなげた（当然だが）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mitshoji.github.io/mitstream/blog/20180808_diary/" />
+
+
+
+<meta property="article:published_time" content="2018-08-08T23:21:53&#43;09:00"/>
+
+<meta property="article:modified_time" content="2018-08-08T23:21:53&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Cromebookがきた 
+
+</title>
+<link rel="canonical" href="https://mitshoji.github.io/mitstream/blog/20180808_diary/">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/reset.css">
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/pygments.css">
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="ja">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://mitshoji.github.io/mitstream/"><img class="avatar" src="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg" srcset="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg 1x"></a>
+            
+            <a href="https://mitshoji.github.io/mitstream/"><div class="name">mitstream</div></a>
+            
+              <h3 class="self-intro">math and sword</h3>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-about"><a href="https://mitshoji.github.io/mitstream/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://mitshoji.github.io/mitstream/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-haskell"><a href="https://mitshoji.github.io/mitstream/haskell/"><span>Haskell</span></a></li>
+                    
+                        <li class="nav-math"><a href="https://mitshoji.github.io/mitstream/math/"><span>Math</span></a></li>
+                    
+                        <li class="nav-sword"><a href="https://mitshoji.github.io/mitstream/sword"><span>Sword</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="https://github.com/mitshoji" target="_blank" rel="noopener"><img class="icon" src="https://mitshoji.github.io/mitstream/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+            <a href="https://twitter.com/mitstream" target="_blank" rel="noopener"><img class="icon" src="https://mitshoji.github.io/mitstream/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:mathandsword.mitstream@gmail.com"><img class="icon" src="https://mitshoji.github.io/mitstream/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Cromebookがきた
+
+</div>
+
+                    <div class="initials"><a href="https://mitshoji.github.io/mitstream"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Wed Aug 8 8088 88:00:00 JST'>Aug 8, 8088</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>US Amazon.com で購入したChromebookが来た。予定より1周間も早く配送され、即配オプションを付けなくてむしろラッキー。</p>
+
+<h2 id="asus-c101pa">ASUS C101PA</h2>
+
+<h3 id="cpu">CPU</h3>
+
+<p>OP1, Made for Chromebooks, Hexa-core(Dual ARM® Cortex®-A72, Quad Cortex®-A53 big.LITTLE™ configuration)
+<br></p>
+
+<h3 id="メインメモリ">メインメモリ</h3>
+
+<p>4 GB
+<br></p>
+
+<h3 id="表示機能">表示機能</h3>
+
+<p>10.1インチ LEDバックライト WXGA (1280x800) Touchscreen
+<br></p>
+
+<h3 id="サイズ">サイズ</h3>
+
+<p>幅262.8 mm×奥行き182.4 mm×高さ15.6 mm
+<br></p>
+
+<h3 id="質量">質量</h3>
+
+<p>約0.9 kg
+<br></p>
+
+<p>とにかく安くて軽いものを、と思って探した品。日本で買うと35,000円くらいのようだが$250でGET。</p>
+
+<p>よーし、これにLinux入れて遊ぶぞー！と思っていたら、通常のGalliumOSが入らない。プロセッサの種類で対応できないOSがあるなんて知らなかった。</p>
+
+<p>GalliumOSはintel系メインなのに対し、今回買ったやつはARMなのでまた別のディストロが必要らしい。ARMと言えばRaspberry PiなのでもしかしたらRasbianが入るかもしれないが、それはそれで調べるのが面倒。なので簡単にLinuxが使える環境をもうちょっと調べます。とりあえずChromOSでは動いた。WiFiもつなげた（当然だが）</p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://mitshoji.github.io/mitstream/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
