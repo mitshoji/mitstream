@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mitshoji.github.io/mitstream/math/threewins/</loc>
+    <lastmod>2018-12-10T23:36:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mitshoji.github.io/mitstream/sword/20180823_keiko/</loc>
     <lastmod>2018-08-25T06:47:23+09:00</lastmod>
   </url>
@@ -125,6 +130,18 @@
   </url>
   
   <url>
+    <loc>https://mitshoji.github.io/mitstream/</loc>
+    <lastmod>2018-12-10T23:36:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/math/</loc>
+    <lastmod>2018-12-10T23:36:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mitshoji.github.io/mitstream/sword/</loc>
     <lastmod>2018-08-25T06:47:23+09:00</lastmod>
     <priority>0</priority>
@@ -132,12 +149,6 @@
   
   <url>
     <loc>https://mitshoji.github.io/mitstream/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mitshoji.github.io/mitstream/</loc>
-    <lastmod>2018-08-25T06:47:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="mitstream">
+<meta name="description" content="\documentclass{jsarticle} \usepackage[dvipdfmx]{graphicx} \usepackage{bm} \usepackage{amsmath} \title{3人勝ち抜き戦で何人が金メダルをもらえるか？}
+\author{庄司　充＠mitstream} \date{\today} \begin{document} \maketitle \section{問題の背景}
+剣道の試合で個人戦といえば通常はトーナメント戦だが、中には3人勝ち抜き戦というのがある。これは文字通り1人の選手が3試合連続で試合に勝てば表彰されるという方式である。例を説明しよう。参加選手に1から順番に1,2,3&hellip;と番号とつける。第1試合は選手1と選手2が戦う。もし選手2が勝った場合、選手1は敗退となる。選手2は続いて選手3と試合をする。ここで選手3が勝てば選手2は敗退となる。選手3は続いて選手4と試合をする。ここで選手3が再び勝てば、選手4は敗退し、選手3は引き続き選手5と対戦する。ここでも選手3が勝てば、選手5は敗退し、選手3は勝ち抜きとなり金メダルをもらえる。次の試合は選手6と選手7で行われ、同様に負けた選手は敗退し、勝った選手は残って次の相手と対戦する。 引き分けはない。
+さて、この試合を主催者側から見てみよう。3人勝ち抜く選手が出るごとに金メダルを1つ進呈しなければならない。参加者が$N$人いる場合、主催者は金メダルをいくつ準備しておけば良いのだろうか？これが今回考察すべき問題である。
+\section{方針} 簡単のため、全ての試合が五分五分であるとする。すなわち全ての試合において対戦する両者の各々が$1&frasl;2$の確率で勝つとする。勝敗の確率を適当において問題を一般化しても良いが、計算が煩雑になるだけで数学的な差異はない。
+試合は状態1から状態3の3種類に分類することができる。状態1は対戦する両者が初戦の場合、状態2は一方が2試合目で相手は初戦の場合、状態3は一方が3試合目で相手は初戦の場合と定める。ある選手が3連勝するとは、状態3の状態で3勝目を上げることであり、その次の試合は必ず状態1である。すなわち、3人勝ち抜いて金メダルをもらう選手の数を知りたければ、状態1の試合が何回出現したかを数えれば良い。第1試合を除き、状態1の試合が出現したということは、その前の試合で勝ち抜き者が出現したということになるからである。よって方針として状態1の試合が出現する期待値を求めることとする。
+\section{具体的な計算} \subsection{記号の定義} 第$n$試合目が状態1である確率を$x_n$、状態2である確率を$y_n$、状態3である確率を$z_n$とする。試合はこの3つの状態のいずれかにしかならないから、$x_n &#43; y_n &#43; z_n = 1$である。今後の表記のために、3つの状態を1つにまとめて \begin{equation} \bm{p}_n = \left( \begin{array}{c} x_n y_n z_n \end{array} \right) \end{equation} と表記することとする。第1試合は対戦する両者とも初戦なので、 \begin{equation} \bm{p}_1 = \left( \begin{array}{c} 1
+0
+0 \end{array} \right) \end{equation} である。また、第2試合は第1試合の結果、必ずいずれか一方が勝ち残り（この選手を選手2とする）、新たな相手（この選手を選手3とする）と対戦することになるので、状態2以外にはなり得ない。すなわち、 \begin{equation} \bm{p}_2 = \left( \begin{array}{c} 0
+1
+0 \end{array} \right) \end{equation} 第3試合からは、第2試合の結果に応じて状態が異なる。仮に選手2が勝った場合、第3試合は選手2対新たな選手（選手4）である。これは状態3に該当する。逆に第2試合で選手3が勝った場合、第3試合は選手3対選手4であるが、これは選手3の履歴を考えれば状態2に該当する。 \begin{equation} \bm{p}_3 = \left( \begin{array}{c} \displaystyle 0
+\displaystyle \frac{1}{2}">
+
+<meta property="og:title" content="Threewins" />
+<meta property="og:description" content="\documentclass{jsarticle} \usepackage[dvipdfmx]{graphicx} \usepackage{bm} \usepackage{amsmath} \title{3人勝ち抜き戦で何人が金メダルをもらえるか？}
+\author{庄司　充＠mitstream} \date{\today} \begin{document} \maketitle \section{問題の背景}
+剣道の試合で個人戦といえば通常はトーナメント戦だが、中には3人勝ち抜き戦というのがある。これは文字通り1人の選手が3試合連続で試合に勝てば表彰されるという方式である。例を説明しよう。参加選手に1から順番に1,2,3&hellip;と番号とつける。第1試合は選手1と選手2が戦う。もし選手2が勝った場合、選手1は敗退となる。選手2は続いて選手3と試合をする。ここで選手3が勝てば選手2は敗退となる。選手3は続いて選手4と試合をする。ここで選手3が再び勝てば、選手4は敗退し、選手3は引き続き選手5と対戦する。ここでも選手3が勝てば、選手5は敗退し、選手3は勝ち抜きとなり金メダルをもらえる。次の試合は選手6と選手7で行われ、同様に負けた選手は敗退し、勝った選手は残って次の相手と対戦する。 引き分けはない。
+さて、この試合を主催者側から見てみよう。3人勝ち抜く選手が出るごとに金メダルを1つ進呈しなければならない。参加者が$N$人いる場合、主催者は金メダルをいくつ準備しておけば良いのだろうか？これが今回考察すべき問題である。
+\section{方針} 簡単のため、全ての試合が五分五分であるとする。すなわち全ての試合において対戦する両者の各々が$1&frasl;2$の確率で勝つとする。勝敗の確率を適当において問題を一般化しても良いが、計算が煩雑になるだけで数学的な差異はない。
+試合は状態1から状態3の3種類に分類することができる。状態1は対戦する両者が初戦の場合、状態2は一方が2試合目で相手は初戦の場合、状態3は一方が3試合目で相手は初戦の場合と定める。ある選手が3連勝するとは、状態3の状態で3勝目を上げることであり、その次の試合は必ず状態1である。すなわち、3人勝ち抜いて金メダルをもらう選手の数を知りたければ、状態1の試合が何回出現したかを数えれば良い。第1試合を除き、状態1の試合が出現したということは、その前の試合で勝ち抜き者が出現したということになるからである。よって方針として状態1の試合が出現する期待値を求めることとする。
+\section{具体的な計算} \subsection{記号の定義} 第$n$試合目が状態1である確率を$x_n$、状態2である確率を$y_n$、状態3である確率を$z_n$とする。試合はこの3つの状態のいずれかにしかならないから、$x_n &#43; y_n &#43; z_n = 1$である。今後の表記のために、3つの状態を1つにまとめて \begin{equation} \bm{p}_n = \left( \begin{array}{c} x_n y_n z_n \end{array} \right) \end{equation} と表記することとする。第1試合は対戦する両者とも初戦なので、 \begin{equation} \bm{p}_1 = \left( \begin{array}{c} 1
+0
+0 \end{array} \right) \end{equation} である。また、第2試合は第1試合の結果、必ずいずれか一方が勝ち残り（この選手を選手2とする）、新たな相手（この選手を選手3とする）と対戦することになるので、状態2以外にはなり得ない。すなわち、 \begin{equation} \bm{p}_2 = \left( \begin{array}{c} 0
+1
+0 \end{array} \right) \end{equation} 第3試合からは、第2試合の結果に応じて状態が異なる。仮に選手2が勝った場合、第3試合は選手2対新たな選手（選手4）である。これは状態3に該当する。逆に第2試合で選手3が勝った場合、第3試合は選手3対選手4であるが、これは選手3の履歴を考えれば状態2に該当する。 \begin{equation} \bm{p}_3 = \left( \begin{array}{c} \displaystyle 0
+\displaystyle \frac{1}{2}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mitshoji.github.io/mitstream/math/threewins/" />
+
+
+
+<meta property="article:published_time" content="2018-12-10T23:36:48&#43;09:00"/>
+
+<meta property="article:modified_time" content="2018-12-10T23:36:48&#43;09:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Threewins 
+
+</title>
+<link rel="canonical" href="https://mitshoji.github.io/mitstream/math/threewins/">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/reset.css">
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/pygments.css">
+    <link rel="stylesheet" href="https://mitshoji.github.io/mitstream/css/main.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="ja">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                
+                <a href="https://mitshoji.github.io/mitstream/"><img class="avatar" src="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg" srcset="https://mitshoji.github.io/mitstream/img/mit_magritte.jpg 1x"></a>
+            
+            <a href="https://mitshoji.github.io/mitstream/"><div class="name">mitstream</div></a>
+            
+              <h3 class="self-intro">math and sword</h3>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-about"><a href="https://mitshoji.github.io/mitstream/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-blog"><a href="https://mitshoji.github.io/mitstream/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-haskell"><a href="https://mitshoji.github.io/mitstream/haskell/"><span>Haskell</span></a></li>
+                    
+                        <li class="nav-math"><a href="https://mitshoji.github.io/mitstream/math/"><span>Math</span></a></li>
+                    
+                        <li class="nav-sword"><a href="https://mitshoji.github.io/mitstream/sword"><span>Sword</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="https://github.com/mitshoji" target="_blank" rel="noopener"><img class="icon" src="https://mitshoji.github.io/mitstream/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+            <a href="https://twitter.com/mitstream" target="_blank" rel="noopener"><img class="icon" src="https://mitshoji.github.io/mitstream/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <a href="mailto:mathandsword.mitstream@gmail.com"><img class="icon" src="https://mitshoji.github.io/mitstream/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+<section class="main">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">
+
+    Threewins
+
+</div>
+
+            <div class="markdown">
+                <p>\documentclass{jsarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{bm}
+\usepackage{amsmath}
+\title{3人勝ち抜き戦で何人が金メダルをもらえるか？}</p>
+
+<p>\author{庄司　充＠mitstream}
+\date{\today}
+\begin{document}
+\maketitle
+\section{問題の背景}</p>
+
+<p>剣道の試合で個人戦といえば通常はトーナメント戦だが、中には3人勝ち抜き戦というのがある。これは文字通り1人の選手が3試合連続で試合に勝てば表彰されるという方式である。例を説明しよう。参加選手に1から順番に1,2,3&hellip;と番号とつける。第1試合は選手1と選手2が戦う。もし選手2が勝った場合、選手1は敗退となる。選手2は続いて選手3と試合をする。ここで選手3が勝てば選手2は敗退となる。選手3は続いて選手4と試合をする。ここで選手3が再び勝てば、選手4は敗退し、選手3は引き続き選手5と対戦する。ここでも選手3が勝てば、選手5は敗退し、選手3は勝ち抜きとなり金メダルをもらえる。次の試合は選手6と選手7で行われ、同様に負けた選手は敗退し、勝った選手は残って次の相手と対戦する。 引き分けはない。</p>
+
+<p>さて、この試合を主催者側から見てみよう。3人勝ち抜く選手が出るごとに金メダルを1つ進呈しなければならない。参加者が$N$人いる場合、主催者は金メダルをいくつ準備しておけば良いのだろうか？これが今回考察すべき問題である。</p>
+
+<p>\section{方針}
+簡単のため、全ての試合が五分五分であるとする。すなわち全ての試合において対戦する両者の各々が$<sup>1</sup>&frasl;<sub>2</sub>$の確率で勝つとする。勝敗の確率を適当において問題を一般化しても良いが、計算が煩雑になるだけで数学的な差異はない。</p>
+
+<p>試合は状態1から状態3の3種類に分類することができる。状態1は対戦する両者が初戦の場合、状態2は一方が2試合目で相手は初戦の場合、状態3は一方が3試合目で相手は初戦の場合と定める。ある選手が3連勝するとは、状態3の状態で3勝目を上げることであり、その次の試合は必ず状態1である。すなわち、3人勝ち抜いて金メダルをもらう選手の数を知りたければ、状態1の試合が何回出現したかを数えれば良い。第1試合を除き、状態1の試合が出現したということは、その前の試合で勝ち抜き者が出現したということになるからである。よって方針として状態1の試合が出現する期待値を求めることとする。</p>
+
+<p>\section{具体的な計算}
+\subsection{記号の定義}
+第$n$試合目が状態1である確率を$x_n$、状態2である確率を$y_n$、状態3である確率を$z_n$とする。試合はこの3つの状態のいずれかにしかならないから、$x_n + y_n + z_n = 1$である。今後の表記のために、3つの状態を1つにまとめて
+\begin{equation}
+\bm{p}_n = \left(
+    \begin{array}{c}
+      x_n <br />
+      y_n <br />
+      z_n
+    \end{array}
+  \right)
+\end{equation}
+と表記することとする。第1試合は対戦する両者とも初戦なので、
+\begin{equation}
+\bm{p}_1 = \left(
+    \begin{array}{c}
+      1<br />
+      0<br />
+      0
+    \end{array}
+  \right)
+\end{equation}
+である。また、第2試合は第1試合の結果、必ずいずれか一方が勝ち残り（この選手を選手2とする）、新たな相手（この選手を選手3とする）と対戦することになるので、状態2以外にはなり得ない。すなわち、
+\begin{equation}
+\bm{p}_2 = \left(
+    \begin{array}{c}
+      0<br />
+      1<br />
+      0
+    \end{array}
+  \right)
+\end{equation}
+第3試合からは、第2試合の結果に応じて状態が異なる。仮に選手2が勝った場合、第3試合は選手2対新たな選手（選手4）である。これは状態3に該当する。逆に第2試合で選手3が勝った場合、第3試合は選手3対選手4であるが、これは選手3の履歴を考えれば状態2に該当する。
+\begin{equation}
+\bm{p}_3 = \left(
+    \begin{array}{c}
+      \displaystyle 0<br />
+      <br />
+      \displaystyle \frac{1}{2}<br />
+      <br />
+      \displaystyle \frac{1}{2}
+    \end{array}
+  \right)
+\end{equation}
+である。</p>
+
+<p>一般に第$n+1$試合における試合の状態は1つ前の試合、つまり第$n$試合の状態に依存し、それぞれ
+\begin{eqnarray} \label{base-eqs}
+  \left{
+    \begin{array}{l}
+      \displaystyle x_{n+1} = \frac{1}{2} z<em>n <br />
+      <br />
+      \displaystyle y</em>{n+1} = x_n + \frac{1}{2} y_n + \frac{1}{2} z<em>n <br />
+      <br />
+      \displaystyle z</em>{n+1} = \frac{1}{2} y_n
+    \end{array}
+  \right.
+\end{eqnarray}
+と表される。この関係は表\ref{tab:relations}にまとめた。</p>
+
+<p>\begin{table}[b]
+ \begin{center}
+  \caption{試合状態の前後関係}
+   \begin{tabular}{|l|c||r|} \hline
+    第$n-1$試合 &amp; 勝者 &amp; 第$n$試合 \ \hline \hline
+    状態1 &amp; 初戦の選手 &amp; 状態2 \ \hline
+    状態2 &amp; 初戦の選手 &amp; 状態2 \ \cline{2-3}
+      &amp; 2戦目の選手 &amp; 状態3 \ \hline
+    状態3 &amp; 3戦目の選手 &amp; 状態1 \ \cline{2-3}
+      &amp; 初戦の選手 &amp; 状態2 \ \hline
+   \end{tabular} \label{tab:relations}
+ \end{center}
+\end{table}</p>
+
+<p>今後のために行列表記を導入し
+\begin{eqnarray}
+A=
+ \left(
+  \begin{array}{ccc}
+   \displaystyle 0 &amp;\displaystyle 0 &amp; \displaystyle \frac{1}{2} <br />
+   &amp; <br />
+   \displaystyle 1 &amp;\displaystyle \frac{1}{2} &amp; \displaystyle \frac{1}{2} <br />
+   &amp; <br />
+   \displaystyle 0 &amp; \displaystyle \frac{1}{2} &amp; \displaystyle 0 <br />
+  \end{array}
+ \right)
+\end{eqnarray}</p>
+
+<p>と表すと、式(\ref{base-eqs})は</p>
+
+<p>\begin{equation} \label{problem}
+ \bm{p}<em>{n+1} = A \bm{p}</em>{n}
+\end{equation}</p>
+
+<p>と簡潔な形に書ける。</p>
+
+<p>\subsection{計算の道すじ}
+式(\ref{problem})より</p>
+
+<p>\begin{equation} \label{main-problem}
+ \bm{p}_n = A^{n-1} \bm{p}_1
+\end{equation}</p>
+
+<p>と分かるので、我々は単純な線形代数の問題（式(\ref{main-problem})）を解くことで、第$n$試合目が状態1となる確率$x_{n}$を知ることができる。「方針」のところで述べた通り、状態1の出現数が勝ち抜き者数と等しいので（厳密には第1試合があるので1つ違うが）、$N$人が参加する大会における勝ち抜き者数の期待値$E$は</p>
+
+<p>\begin{equation} \label{kitaichi}
+ E = -1 + \sum_{n=1}^{L} x_n
+\end{equation}</p>
+
+<p>で求められる。$-1$は第1試合を除くため、また和の上限$L$は、$N$人参加の場合の試合数を意味する。試合数は試合が終わった選手の数を数え上げることで$\bm{p}_n$と次の式で関係づけられる。</p>
+
+<p>\begin{equation} \label{games}
+ N = \sum_{n=1}^{L} (2 x_n + y_n + z_n) -1
+\end{equation}
+すなわち、状態1の試合が始まるということは、その直前の試合が終了したことで勝敗に関わらず2名が出番を終え、その他の状態では敗者のみが出番を終える。ただしここでも第1試合だけは例外なので$-1$の項がつく。$x_n + y_n + z_n = 1$に留意すると式(\ref{games})より</p>
+
+<p>\begin{eqnarray} \label{upperlimit}
+ N + 1 &amp; = &amp; \sum_{n=1}^{L} (1 + x_n) \nonumber <br />
+       &amp; = &amp; L + E + 1 \nonumber <br />
+ \Leftrightarrow
+ &amp;&amp; L = N - E
+\end{eqnarray}</p>
+
+<p>期待値を求めるための和の上限が期待値によるという一見するとややこしい状況になってしまったが、これは後ほど$x_n$の具体的な形を求めたあとで解決を図る。</p>
+
+<p>\subsection{$A^{n-1}$の計算}
+まずは定石に則って行列$A$の対角化を試みる。そのためにまずは固有値と固有ベクトルを求める。固有値とは
+\begin{equation}
+ A \bm{x} = \lambda \bm{x}
+\end{equation}
+を満たす$\lambda$のことであり、それに対応するゼロベクトルでない$\bm{x}$を固有ベクトルという。今は$A$が$3\times 3$行列なので（重複を許して）固有値は3つある。もし固有値に重複があれば$A$は対角化できず、ジョルダン標準形を求めなければならないが、幸いにして今回のケースでは固有値の重複はない。ただし固有値が複素数となるため計算は面倒だ。</p>
+
+<p>\begin{eqnarray}
+ A \bm{x} = \lambda \bm{x} \nonumber
+ &amp;&amp;\Leftrightarrow
+ \left(A - \lambda E \right) \bm{x} = \bm{0} \nonumber <br />
+ &amp;&amp;\Leftrightarrow
+ \mathrm{det} \left(A - \lambda E \right) = 0 \nonumber <br />
+ &amp;&amp;\Leftrightarrow
+ \left|
+    \begin{array}{ccc}
+      -\lambda &amp; 0 &amp; \displaystyle \frac{1}{2} <br />
+      <br />
+      1 &amp; \displaystyle \frac{1}{2} - \lambda &amp; \displaystyle \frac{1}{2} <br />
+      <br />
+      0 &amp; \displaystyle \frac{1}{2} &amp; - \lambda
+    \end{array}
+  \right| = 0 \nonumber <br />
+  &amp;&amp;\Leftrightarrow
+  \lambda^2 \left(\frac{1}{2} - \lambda \right)
+  + \frac{1}{4}
+  + \frac{1}{4} \lambda = 0
+\end{eqnarray}</p>
+
+<p>これより</p>
+
+<p>\begin{equation}
+ \lambda = 1,
+           \frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}},
+           \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}
+\end{equation}
+と3つの固有値が求められる。これらに対応する固有ベクトルはそれぞれ
+\begin{equation}
+ \left(
+    \begin{array}{c}
+      \displaystyle \frac{1}{4}<br />
+      <br />
+      \displaystyle 1<br />
+      <br />
+      \displaystyle \frac{1}{2}
+    \end{array}
+ \right)
+ ,
+  \left(
+    \begin{array}{c}
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}<br />
+      <br />
+      \displaystyle 1<br />
+      <br />
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}
+    \end{array}
+ \right)
+ ,
+  \left(
+    \begin{array}{c}
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}<br />
+      <br />
+      \displaystyle 1<br />
+      <br />
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}
+    \end{array}
+ \right)
+\end{equation}
+と求められる。これより</p>
+
+<p>\begin{eqnarray}
+ P= \left(
+    \begin{array}{ccc}
+      \displaystyle \frac{1}{4} &amp;
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}<br />
+      &amp;<br />
+      \displaystyle 1 &amp;
+      \displaystyle 1 &amp;
+      \displaystyle 1 <br />
+      &amp;<br />
+      \displaystyle \frac{1}{2} &amp;
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}
+    \end{array}
+ \right)
+\end{eqnarray}
+を用いて、</p>
+
+<p>\begin{eqnarray}
+ P^{-1} A P = \left(
+    \begin{array}{ccc}
+      \displaystyle 1 &amp; \displaystyle 0 &amp; \displaystyle 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle \frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} &amp; 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle 0 &amp; \displaystyle \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} <br />
+    \end{array}
+ \right)
+\end{eqnarray}
+と表せる。念のため、$P^{-1}$は$P$の逆行列である。
+対角化は行列の$n$乗を計算する際の常套手段である。なぜならば対角化された行列の積は計算が容易だからである。さらに
+\begin{eqnarray}
+\left(P^{-1} A P \right)^{n} &amp; = &amp; (P^{-1} A P) (P^{-1} A P) (P^{-1} A P) \cdots (P^{-1} A P) \ \nonumber
+&amp; = &amp; P^{-1} A (P P^{-1}) A (P P^{-1}) A (P P^{-1}) \cdots  A P \ \nonumber
+&amp; = &amp; P^{-1} A^{n} P
+\end{eqnarray}
+という計算を踏まえると、
+\begin{eqnarray}
+ P^{-1} A^{n} P = \left(
+    \begin{array}{ccc}
+      \displaystyle 1 &amp; \displaystyle 0 &amp; \displaystyle 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle \left(\frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}\right)^{n} &amp; 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle 0 &amp; \left(\displaystyle \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} \right)^{n}<br />
+    \end{array}
+ \right)
+\end{eqnarray}</p>
+
+<p>すなわち</p>
+
+<p>\begin{eqnarray} \label{an}
+ A^{n} = P \left(
+    \begin{array}{ccc}
+      \displaystyle 1 &amp; \displaystyle 0 &amp; \displaystyle 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle \left(\frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}\right)^{n} &amp; 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle 0 &amp; \left(\displaystyle \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} \right)^{n}<br />
+    \end{array}
+ \right) P^{-1}
+\end{eqnarray}</p>
+
+<p>と簡単に（少なくとも直接$A$を掛ける操作を$n$回するよりは…）$A^{n}$を計算できる。
+必要なのは$P^{-1}$を求めて、具体的に式(\ref{an})の右辺をすることである。
+ここでは煩雑さを避けるために途中の計算を省略するが、$P^{-1}$は余因子行列$\tilde{P}$と$P$の行列式$\mathrm{det}P$を用いて</p>
+
+<p>\begin{eqnarray} \label{pinverse}
+ P^{-1} &amp;=&amp; \frac{\tilde{P}}{\mathrm{det}P} \ \nonumber
+        &amp;\ \nonumber
+        &amp;=&amp; \left(
+    \begin{array}{ccc}
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} <br />
+      &amp;\ <br />
+      \displaystyle \frac{1}{2} - \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \frac{1}{4} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} - \frac{1}{4} <br />
+      &amp;\ <br />
+      \displaystyle \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} - \frac{1}{2} &amp;
+      \displaystyle \frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \frac{1}{4} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} &amp;
+      \displaystyle \frac{1}{4} - \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} <br />
+    \end{array}
+ \right)
+\end{eqnarray}</p>
+
+<p>と求められる。</p>
+
+<p>さて、本来我々が求めたいのは$\bm{p}_n$、もっと言えば$x_n$である。</p>
+
+<p>\begin{eqnarray<em>}
+ \bm{p}_n &amp; = &amp; A^{n-1} \bm{p}_1 <br />
+          &amp;<br />
+          &amp; = &amp; P \left(
+    \begin{array}{ccc}
+      \displaystyle 1 &amp; \displaystyle 0 &amp; \displaystyle 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle \left(\frac{1}{2} \mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}\right)^{n-1} &amp; 0 <br />
+      &amp;<br />
+      \displaystyle 0 &amp; \displaystyle 0 &amp; \left(\displaystyle \frac{1}{2} \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} \right)^{n-1}<br />
+    \end{array}
+ \right) P^{-1} \left(
+  \begin{array}{c}
+      1<br />
+      <br />
+      <br />
+      0<br />
+      <br />
+      <br />
+      0
+  \end{array}
+  \right)
+\end{eqnarray</em>}</p>
+
+<p>をひたすら計算すれば答えにたどり着く。（割と大変な計算をすることになる…。）
+\begin{eqnarray}\label{xn}
+x_n &amp; = &amp; \frac{4}{7}\frac{1}{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} }
+\left{
+\frac{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} -\mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} }{4}
++ \left(\frac{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}}{2}\right)^n
+- 4 \left(\frac{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}}}{2}\right)^{n+1}
+- \left(\frac{\mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}}{2}\right)^n
++ 4 \left(\frac{\mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}}}{2}\right)^{n+1}
+\right} \nonumber <br />
+ &amp; = &amp; \frac{4}{7}\frac{1}{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} }
+\left{
+\frac{\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} -\mathrm{e}^{-\frac{2}{3}\pi \mathrm{i}} }{4}
++ \frac{1}{2^n}\left(\mathrm{e}^{\frac{2}{3} n \pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3} n \pi \mathrm{i}}\right)
+- \frac{1}{2^{n-1}} \left(\mathrm{e}^{\frac{2}{3}\pi \mathrm{i}} - \mathrm{e}^{-\frac{2}{3} n \pi \mathrm{i}}\right)
+\right} \nonumber <br />
+ &amp; = &amp; \frac{1}{7} + \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+ \left {
+  \sin{\frac{2n \pi}{3}} - 2 \sin{\frac{2(n+1) \pi}{3}}
+ \right} \nonumber <br />
+ &amp; = &amp; \frac{1}{7} + \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+ \left(
+  2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+ \right)
+\end{eqnarray}
+途中で
+\begin{eqnarray}
+ \mathrm{e}^{\mathrm{i} z} - \mathrm{e}^{-\mathrm{i} z} = 2\mathrm{i} \sin{z}
+\end{eqnarray}
+を用いた。式(\ref{xn})は第$n$試合目に３人勝ち抜きを決めた選手が現れる確率を表す。</p>
+
+<p>\subsection{勝ち抜き者数の期待値$E$の計算}
+$x<em>n$が求められたので、式（\ref{kitaichi}）を用いて期待値の計算を進めることができる。すなわち
+\begin{eqnarray}\label{kitaichi2}
+ E &amp; = &amp; -1 + \sum</em>{n=1}^{L} x<em>n \nonumber <br />
+   &amp; = &amp; -1 + \sum</em>{n=1}^{L}
+   \left {
+   \frac{1}{7} + \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+    \left(
+     2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+    \right)
+   \right } \nonumber <br />
+  &amp; = &amp; -1 + \frac{1}{7}L + \sum_{n=1}^{L}
+   \left {
+   \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+    \left(
+     2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+    \right)
+   \right }
+\end{eqnarray}
+であるが、ここで試合数$L$の取り扱いが問題になる。この問題は真正面から取り組んでもどうにもならないので、ここでは抜け道を使って困難を回避する。</p>
+
+<p>まず和の部分であるが、これはよく見ると$<sup>1</sup>&frasl;<sub>2</sub>^{n-3}$のおかげで、$n$の増加に伴い急速にある値に収束することが期待される。よって$n$がある程度より大きければ、和の上限をいくつにしても収束する値にほとんど影響しない。そこで思い切って$L\to \infty$としてしまう。</p>
+
+<p>式（\ref{kitaichi2}）の中の三角関数は$n$を3で割った余りによって3通りの値を取る。
+\begin{eqnarray}
+ 2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+ = \begin{cases}
+  \frac{3\sqrt{\mathstrut 3}}{2} &amp; n \equiv 1 \pmod{3} <br />
+  <br />
+  -\frac{\sqrt{\mathstrut 3}}{2} &amp; n \equiv 2 \pmod{3} <br />
+  <br />
+  -\sqrt{\mathstrut 3} &amp; n \equiv 0 \pmod{3}<br />
+   \end{cases}
+\end{eqnarray}</p>
+
+<p>これを踏まえて以下の通り和の部分を計算する。
+\begin{eqnarray}
+&amp;&amp;\sum<em>{n=1}^{L}
+   \left {
+   \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+    \left(
+     2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+    \right)
+   \right }　\nonumber <br />
+&amp;\equiv&amp;\sum</em>{n=1}^{\infty}
+   \left {
+   \frac{\sqrt{\mathstrut 3}}{21} \frac{1}{2^{n-3}}
+    \left(
+     2\sin{\frac{2n \pi}{3}} - \sqrt{\mathstrut 3} \cos{\frac{2n \pi}{3}}
+    \right)
+   \right }　\nonumber <br />
+   &amp;=&amp;
+\sum<em>{k=0}^{\infty}
+   \left {
+   \frac{\sqrt{\mathstrut 3}}{21}
+    \left( \frac{1}{2^{3k+1-3}} \times \frac{3\sqrt{\mathstrut 3}}{2}
+    - \frac{1}{2^{3k+2-3}} \times \frac{\sqrt{\mathstrut 3}}{2}
+    - \frac{1}{2^{3k+3-3}} \times \sqrt{\mathstrut 3}<br />
+    \right)
+   \right }  \nonumber <br />
+   &amp;=&amp;
+\sum</em>{k=0}^{\infty}
+ \frac{\sqrt{\mathstrut 3}}{21}
+    \left( \frac{6\sqrt{\mathstrut 3}}{8^k}
+          -\frac{\sqrt{\mathstrut 3}}{8^k}
+          -\frac{\sqrt{\mathstrut 3}}{8^k}
+   \right)　\nonumber <br />
+   &amp;=&amp;
+\sum_{k=0}^{\infty} \frac{\sqrt{\mathstrut 3}}{21}\cdot \frac{4\sqrt{\mathstrut 3}}{8^k}  \nonumber <br />
+   &amp;=&amp;
+\displaystyle \frac{4}{7} \times \displaystyle \frac{1}{1-\displaystyle \frac{1}{8}} \nonumber <br />
+  &amp;=&amp;
+\frac{32}{49}
+\end{eqnarray}</p>
+
+<p>これと式（\ref{kitaichi2}）および式（\ref{upperlimit}）より</p>
+
+<p>\begin{eqnarray}
+ E &amp;&amp; \simeq -1 + \frac{1}{7} L + \frac{32}{49} \nonumber <br />
+   &amp;&amp; \simeq -1 + \frac{1}{7} \left(N-E\right) + \frac{32}{49} \nonumber <br />
+\Leftrightarrow
+ E &amp;&amp; \simeq \frac{N}{8} - \frac{17}{56}
+\end{eqnarray}</p>
+
+<p>\section{まとめ}
+N人が参加して行う3人勝ち抜き戦において、全ての選手の勝率が五分とした場合に3人抜きを達成する選手の数は概ね$N/8$人であると予想された。これは$\displaystyle \frac{1}{2} \times \frac{1}{2} \times\frac{1}{2}$（五分の試合で3連勝する確率）という単純な直感にほぼ合致しているが、その背景を紐解いていくのは、それなりに骨の折れる計算であった。</p>
+
+<p>\end{document}</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+</body>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</html>
+
