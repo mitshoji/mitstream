@@ -13,16 +13,6 @@
   </url>
   
   <url>
-    <loc>https://mitshoji.github.io/mitstream/blog/hello/</loc>
-    <lastmod>2018-12-05T22:44:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mitshoji.github.io/mitstream/blog/20180819_diary/</loc>
-    <lastmod>2018-12-05T22:22:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mitshoji.github.io/mitstream/sword/20180823_keiko/</loc>
     <lastmod>2018-08-25T06:47:23+09:00</lastmod>
   </url>
@@ -110,6 +100,10 @@
     <loc>https://mitshoji.github.io/mitstream/</loc>
     <lastmod>2018-12-10T23:49:23+09:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitshoji.github.io/mitstream/blog/hello/</loc>
   </url>
   
 </urlset>
