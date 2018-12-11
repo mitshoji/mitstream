@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Maths on MATHMOND</title>
+    <title>Maths on mathmond</title>
     <link>https://mitshoji.github.io/mitstream/math/</link>
-    <description>Recent content in Maths on MATHMOND</description>
+    <description>Recent content in Maths on mathmond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 10 Dec 2018 23:36:48 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 23:49:23 +0900</lastBuildDate>
     
 	<atom:link href="https://mitshoji.github.io/mitstream/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Threewins</title>
-      <link>https://mitshoji.github.io/mitstream/math/threewins/</link>
-      <pubDate>Mon, 10 Dec 2018 23:36:48 +0900</pubDate>
+      <title>3人勝ち抜き戦</title>
+      <link>https://mitshoji.github.io/mitstream/math/threewinsplayer/</link>
+      <pubDate>Mon, 10 Dec 2018 23:49:23 +0900</pubDate>
       
-      <guid>https://mitshoji.github.io/mitstream/math/threewins/</guid>
-      <description>\documentclass{jsarticle} \usepackage[dvipdfmx]{graphicx} \usepackage{bm} \usepackage{amsmath} \title{3人勝ち抜き戦で何人が金メダルをもらえるか？}
-\author{庄司　充＠mitstream} \date{\today} \begin{document} \maketitle \section{問題の背景}
-剣道の試合で個人戦といえば通常はトーナメント戦だが、中には3人勝ち抜き戦というのがある。これは文字通り1人の選手が3試合連続で試合に勝てば表彰されるという方式である。例を説明しよう。参加選手に1から順番に1,2,3&amp;hellip;と番号とつける。第1試合は選手1と選手2が戦う。もし選手2が勝った場合、選手1は敗退となる。選手2は続いて選手3と試合をする。ここで選手3が勝てば選手2は敗退となる。選手3は続いて選手4と試合をする。ここで選手3が再び勝てば、選手4は敗退し、選手3は引き続き選手5と対戦する。ここでも選手3が勝てば、選手5は敗退し、選手3は勝ち抜きとなり金メダルをもらえる。次の試合は選手6と選手7で行われ、同様に負けた選手は敗退し、勝った選手は残って次の相手と対戦する。 引き分けはない。
-さて、この試合を主催者側から見てみよう。3人勝ち抜く選手が出るごとに金メダルを1つ進呈しなければならない。参加者が$N$人いる場合、主催者は金メダルをいくつ準備しておけば良いのだろうか？これが今回考察すべき問題である。
-\section{方針} 簡単のため、全ての試合が五分五分であるとする。すなわち全ての試合において対戦する両者の各々が$1&amp;frasl;2$の確率で勝つとする。勝敗の確率を適当において問題を一般化しても良いが、計算が煩雑になるだけで数学的な差異はない。
-試合は状態1から状態3の3種類に分類することができる。状態1は対戦する両者が初戦の場合、状態2は一方が2試合目で相手は初戦の場合、状態3は一方が3試合目で相手は初戦の場合と定める。ある選手が3連勝するとは、状態3の状態で3勝目を上げることであり、その次の試合は必ず状態1である。すなわち、3人勝ち抜いて金メダルをもらう選手の数を知りたければ、状態1の試合が何回出現したかを数えれば良い。第1試合を除き、状態1の試合が出現したということは、その前の試合で勝ち抜き者が出現したということになるからである。よって方針として状態1の試合が出現する期待値を求めることとする。
-\section{具体的な計算} \subsection{記号の定義} 第$n$試合目が状態1である確率を$x_n$、状態2である確率を$y_n$、状態3である確率を$z_n$とする。試合はこの3つの状態のいずれかにしかならないから、$x_n + y_n + z_n = 1$である。今後の表記のために、3つの状態を1つにまとめて \begin{equation} \bm{p}_n = \left( \begin{array}{c} x_n y_n z_n \end{array} \right) \end{equation} と表記することとする。第1試合は対戦する両者とも初戦なので、 \begin{equation} \bm{p}_1 = \left( \begin{array}{c} 1
-0
-0 \end{array} \right) \end{equation} である。また、第2試合は第1試合の結果、必ずいずれか一方が勝ち残り（この選手を選手2とする）、新たな相手（この選手を選手3とする）と対戦することになるので、状態2以外にはなり得ない。すなわち、 \begin{equation} \bm{p}_2 = \left( \begin{array}{c} 0
-1
-0 \end{array} \right) \end{equation} 第3試合からは、第2試合の結果に応じて状態が異なる。仮に選手2が勝った場合、第3試合は選手2対新たな選手（選手4）である。これは状態3に該当する。逆に第2試合で選手3が勝った場合、第3試合は選手3対選手4であるが、これは選手3の履歴を考えれば状態2に該当する。 \begin{equation} \bm{p}_3 = \left( \begin{array}{c} \displaystyle 0
-\displaystyle \frac{1}{2}</description>
+      <guid>https://mitshoji.github.io/mitstream/math/threewinsplayer/</guid>
+      <description>子供の剣道の試合を見ていて気になったことを計算してみました。全ての試合の勝率を五分と仮定しているので、剣道というよりはジャンケンの話になってしまうかも知れません…。
+3人勝ち抜き戦で何人が金メダルをもらえるのか？</description>
     </item>
     
   </channel>

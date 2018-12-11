@@ -111,11 +111,7 @@
                     
                         <li class="nav-blog"><a href="https://mitshoji.github.io/mitstream/blog/"><span>Blog</span></a></li>
                     
-                        <li class="nav-haskell"><a href="https://mitshoji.github.io/mitstream/haskell/"><span>Haskell</span></a></li>
-                    
                         <li class="nav-math"><a href="https://mitshoji.github.io/mitstream/math/"><span>Math</span></a></li>
-                    
-                        <li class="nav-sword"><a href="https://mitshoji.github.io/mitstream/sword"><span>Sword</span></a></li>
                     
                 </ul>
             </nav>
@@ -199,20 +195,32 @@
         </div>
     </div>
 </section>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
 
-
-
-
-
-
-
-
-</body>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-    });
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
 </script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-</html>
 

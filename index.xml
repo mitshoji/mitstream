@@ -1,34 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MATHMOND</title>
+    <title>mathmond</title>
     <link>https://mitshoji.github.io/mitstream/</link>
-    <description>Recent content on MATHMOND</description>
+    <description>Recent content on mathmond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 10 Dec 2018 23:36:48 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 23:49:23 +0900</lastBuildDate>
     
 	<atom:link href="https://mitshoji.github.io/mitstream/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Threewins</title>
-      <link>https://mitshoji.github.io/mitstream/math/threewins/</link>
-      <pubDate>Mon, 10 Dec 2018 23:36:48 +0900</pubDate>
+      <title>3人勝ち抜き戦</title>
+      <link>https://mitshoji.github.io/mitstream/math/threewinsplayer/</link>
+      <pubDate>Mon, 10 Dec 2018 23:49:23 +0900</pubDate>
       
-      <guid>https://mitshoji.github.io/mitstream/math/threewins/</guid>
-      <description>\documentclass{jsarticle} \usepackage[dvipdfmx]{graphicx} \usepackage{bm} \usepackage{amsmath} \title{3人勝ち抜き戦で何人が金メダルをもらえるか？}
-\author{庄司　充＠mitstream} \date{\today} \begin{document} \maketitle \section{問題の背景}
-剣道の試合で個人戦といえば通常はトーナメント戦だが、中には3人勝ち抜き戦というのがある。これは文字通り1人の選手が3試合連続で試合に勝てば表彰されるという方式である。例を説明しよう。参加選手に1から順番に1,2,3&amp;hellip;と番号とつける。第1試合は選手1と選手2が戦う。もし選手2が勝った場合、選手1は敗退となる。選手2は続いて選手3と試合をする。ここで選手3が勝てば選手2は敗退となる。選手3は続いて選手4と試合をする。ここで選手3が再び勝てば、選手4は敗退し、選手3は引き続き選手5と対戦する。ここでも選手3が勝てば、選手5は敗退し、選手3は勝ち抜きとなり金メダルをもらえる。次の試合は選手6と選手7で行われ、同様に負けた選手は敗退し、勝った選手は残って次の相手と対戦する。 引き分けはない。
-さて、この試合を主催者側から見てみよう。3人勝ち抜く選手が出るごとに金メダルを1つ進呈しなければならない。参加者が$N$人いる場合、主催者は金メダルをいくつ準備しておけば良いのだろうか？これが今回考察すべき問題である。
-\section{方針} 簡単のため、全ての試合が五分五分であるとする。すなわち全ての試合において対戦する両者の各々が$1&amp;frasl;2$の確率で勝つとする。勝敗の確率を適当において問題を一般化しても良いが、計算が煩雑になるだけで数学的な差異はない。
-試合は状態1から状態3の3種類に分類することができる。状態1は対戦する両者が初戦の場合、状態2は一方が2試合目で相手は初戦の場合、状態3は一方が3試合目で相手は初戦の場合と定める。ある選手が3連勝するとは、状態3の状態で3勝目を上げることであり、その次の試合は必ず状態1である。すなわち、3人勝ち抜いて金メダルをもらう選手の数を知りたければ、状態1の試合が何回出現したかを数えれば良い。第1試合を除き、状態1の試合が出現したということは、その前の試合で勝ち抜き者が出現したということになるからである。よって方針として状態1の試合が出現する期待値を求めることとする。
-\section{具体的な計算} \subsection{記号の定義} 第$n$試合目が状態1である確率を$x_n$、状態2である確率を$y_n$、状態3である確率を$z_n$とする。試合はこの3つの状態のいずれかにしかならないから、$x_n + y_n + z_n = 1$である。今後の表記のために、3つの状態を1つにまとめて \begin{equation} \bm{p}_n = \left( \begin{array}{c} x_n y_n z_n \end{array} \right) \end{equation} と表記することとする。第1試合は対戦する両者とも初戦なので、 \begin{equation} \bm{p}_1 = \left( \begin{array}{c} 1
-0
-0 \end{array} \right) \end{equation} である。また、第2試合は第1試合の結果、必ずいずれか一方が勝ち残り（この選手を選手2とする）、新たな相手（この選手を選手3とする）と対戦することになるので、状態2以外にはなり得ない。すなわち、 \begin{equation} \bm{p}_2 = \left( \begin{array}{c} 0
-1
-0 \end{array} \right) \end{equation} 第3試合からは、第2試合の結果に応じて状態が異なる。仮に選手2が勝った場合、第3試合は選手2対新たな選手（選手4）である。これは状態3に該当する。逆に第2試合で選手3が勝った場合、第3試合は選手3対選手4であるが、これは選手3の履歴を考えれば状態2に該当する。 \begin{equation} \bm{p}_3 = \left( \begin{array}{c} \displaystyle 0
-\displaystyle \frac{1}{2}</description>
+      <guid>https://mitshoji.github.io/mitstream/math/threewinsplayer/</guid>
+      <description>子供の剣道の試合を見ていて気になったことを計算してみました。全ての試合の勝率を五分と仮定しているので、剣道というよりはジャンケンの話になってしまうかも知れません…。
+3人勝ち抜き戦で何人が金メダルをもらえるのか？</description>
     </item>
     
     <item>
@@ -42,15 +32,6 @@
 地稽古はまわり稽古で佳則先生、花怜、正隆、その後自由で湯浅先生。4人で体力アウト。 湯浅先生を上手く崩すことができない。突きまで食らってしまった。まだまだ。
 2018/08/23 木曜日。やはり遅刻。中西くんにお願いして元に立ってもらい、一人で基本。体はよく動くものの、なんとなくイメージ通りに打てない感覚。間合いがわからなくなった？ この日の稽古はとにかく子供達がダルダルで道場の空気が悪すぎた。若先生たちが基本をやってる間、誰も子供達だけで稽古せず、みんなで先生が終わるのを待っているというアホっぷり。卜伝は負けるだろう。相変わらず誰も来てくれないので、巧太郎を誘って稽古開始。
 巧太郎、颯士、明日香、しげおさん、館長先生。館長が空きそうなときは積極的に行こう。館長から「攻め止まるな！」と言われた。触刃の間から打間に入るまでの間に、一回攻めが止まってしまう時があるらしい。んー、難しい。しばらくの間意識してみよう。</description>
-    </item>
-    
-    <item>
-      <title>The Greatest Showman 2018.08.24</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180824_diary/</link>
-      <pubDate>Sat, 25 Aug 2018 06:41:37 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180824_diary/</guid>
-      <description>とても良かった。音楽と、特にダンス。ミュージカルの王道。また見よう。</description>
     </item>
     
     <item>
@@ -79,16 +60,6 @@
     </item>
     
     <item>
-      <title>mother! 2018.08.16</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180816_diary/</link>
-      <pubDate>Fri, 17 Aug 2018 09:48:01 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180816_diary/</guid>
-      <description>夏休みはできるだけモノを考えずに過ごそう、それには映画が一番だ、ということで、朝も5時から起きだして映画を見る。家族で見られない映画は、どうしてもこの時間か、逆に深夜に見ざるを得ない。
-今日は、前々から気になっていた&amp;rdquo;moter!&amp;ldquo;を鑑賞。最初から最後まで、何が起きているか分からない映画だった。途中途中で何かの暗喩なのだろうな、と思わせる表現が出てくるが、キリスト教との関係はだいぶ後のほうになるまでピンと来なかったし、鑑賞後にネットで評論を見るまで、アベルとカインの寓話になぞらえていることには気が付かなかった。この辺が世界に通じる教養というやつか。でも西洋文化の理解が本当にインテリにとって必要な知識なのだろうか。映画は正直に言って、世界観は面白いが作品としては若干退屈。あまり人にオススメできる感想ではない。</description>
-    </item>
-    
-    <item>
       <title>本日の稽古-2018.08.16</title>
       <link>https://mitshoji.github.io/mitstream/sword/20180816_keiko/</link>
       <pubDate>Fri, 17 Aug 2018 09:36:48 +0900</pubDate>
@@ -102,39 +73,6 @@
     </item>
     
     <item>
-      <title>夏休み(3日目) 2018.08.12</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180812_diary/</link>
-      <pubDate>Wed, 15 Aug 2018 19:42:41 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180812_diary/</guid>
-      <description>二日酔いのままお墓参りをひとまわり。こうたろうが手を叩くので、まだまだ教えが足りないと思ったり。それで午前は終わり。午後は県立植物園に食虫植物展を見に行く。楽しい一日でした！
-実は婆さんの誕生日で64歳になったとか。</description>
-    </item>
-    
-    <item>
-      <title>夏休み(2日目) 2018.08.11</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180811_diary/</link>
-      <pubDate>Wed, 15 Aug 2018 19:41:16 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180811_diary/</guid>
-      <description>朝六時半に家を出て栃木県小山市にて中学生の関東大会を応援。内容は悪くなかったが群馬代表のチームに一本差で負け。大阪があと少し踏ん張れば勝てた。関東大会は流石にレベルが高かったが、山梨だけは次元が一つ低い。関東に出るのがあのレベルではちょっと他県がかわいそう。
-そのまま北関東経由関越で新潟へ。夜は関中同窓会。25年ぶりに会っても普通にバカ話で盛り上がれるのがただただ嬉しい。みんなで仲良く歳を取るんだぜ。</description>
-    </item>
-    
-    <item>
-      <title>夏休み（1日目） 2018.08.10</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180810_diary/</link>
-      <pubDate>Fri, 10 Aug 2018 18:01:24 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180810_diary/</guid>
-      <description>今日から10連休。しっかり休みたい。
-朝4時半に目が覚める。涼しいうちに気になっていた庭の草抜きと伸び放題に伸びた樹の枝の剪定。ついでにプールの水の入れ替えをする。
-家族3人で波崎マクドナルドへ。名古屋味噌カツバーガーとポテトとブルーハワイフロートとシェイクで糖分とりすぎ。せっかく痩せたのに。午後は巧太郎をプールで遊ばせながら、相変わらずYou TubeでAmerica&amp;rsquo;s got tallentを見たり、Shotcutで動画編集の練習をしたりして過ごす。なんとなくスライドショーを作れる気がしてきた。
-夕方には安藤先生の家へ新盆見舞い。これからビール飲んで今日はおしまいかな。
-明日から新潟に帰省します。その前に栃木県小山市で中学生の関東大会応援。夜は関中同窓会予定。未だに場所わからず。</description>
-    </item>
-    
-    <item>
       <title>本日の稽古-2018.08.09</title>
       <link>https://mitshoji.github.io/mitstream/sword/20180809_keiko/</link>
       <pubDate>Fri, 10 Aug 2018 07:35:49 +0900</pubDate>
@@ -143,18 +81,6 @@
       <description>少し遅れて7時15分くらいに到着。久しぶりに安藤先生＆ひろし登場。安藤親子+やすこさんと4人で基本。安藤先生の体力見合いで短めに。
 地稽古は生南、生武、しげおさん、まー。中学生とやるときは攻め合いとか間合いの攻防を演出(?)するのが難しくて、ついつい打ち合いになってしまう。しかもみんな変に近間だから、仕掛けも応じも難しくて、最後はスピードと反射神経の勝負みたいになるので、果たして子供達のための稽古になっているのか不安。自分的には・・・まあ運動かな。応じ技の練習をするには相手の動きが早すぎるし、構えと打突に気をつけながら。
 しかし今日も疲れた。暑すぎは相変わらず。</description>
-    </item>
-    
-    <item>
-      <title>Chromebookがきた 2018.08.08</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180808_diary/</link>
-      <pubDate>Wed, 08 Aug 2018 23:21:53 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180808_diary/</guid>
-      <description>US Amazon.com で購入したChromebookが来た。予定より1周間も早く配送され、即配オプションを付けなくてむしろラッキー。
-ASUS C101PA CPU OP1, Made for Chromebooks, Hexa-core(Dual ARM® Cortex®-A72, Quad Cortex®-A53 big.LITTLE™ configuration) メインメモリ 4 GB 表示機能 10.1インチ LEDバックライト WXGA (1280x800) Touchscreen サイズ 幅262.8 mm×奥行き182.4 mm×高さ15.6 mm 質量 約0.9 kg とにかく安くて軽いものを、と思って探した品。日本で買うと35,000円くらいのようだが$250でGET。
-よーし、これにLinux入れて遊ぶぞー！と思っていたら、通常のGalliumOSが入らない。プロセッサの種類で対応できないOSがあるなんて知らなかった。
-GalliumOSはintel系メインなのに対し、今回買ったやつはARMなのでまた別のディストロが必要らしい。ARMと言えばRaspberry PiなのでもしかしたらRasbianが入るかもしれないが、それはそれで調べるのが面倒。なので簡単にLinuxが使える環境をもうちょっと調べます。とりあえずChromOSでは動いた。WiFiもつなげた（当然だが）</description>
     </item>
     
     <item>
@@ -191,30 +117,6 @@ GalliumOSはintel系メインなのに対し、今回買ったやつはARMなの
     </item>
     
     <item>
-      <title>2018年修武館バーベキュー 2018.08.04</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180804_diary/</link>
-      <pubDate>Sun, 05 Aug 2018 14:37:20 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180804_diary/</guid>
-      <description>今年も恒例のバーベキューに行ってきました。恒例の水遊びも。 流しそうめんを楽しみにしてたのに、気づいたら終わってた・・・。残念。  缶ビール 350:2本， 500:3本 ワイン コップ1杯
-2次会は利根公園で花火。飲み過ぎて最後の方どうやってお開きになったか覚えてない。
-楽しかった〜!!!</description>
-    </item>
-    
-    <item>
-      <title>マークダウンが書けない？ 2018.08.03</title>
-      <link>https://mitshoji.github.io/mitstream/blog/20180803_diary/</link>
-      <pubDate>Sat, 04 Aug 2018 06:02:55 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/20180803_diary/</guid>
-      <description>見出し1 とか。
-見出し2 とか。
-==これはどうなる？
-&amp;mdash;&amp;mdash;これは？
-勉強しなくては。</description>
-    </item>
-    
-    <item>
       <title>本日の稽古-2018.08.02</title>
       <link>https://mitshoji.github.io/mitstream/sword/20180802_keiko/</link>
       <pubDate>Sat, 04 Aug 2018 05:42:13 +0900</pubDate>
@@ -230,16 +132,6 @@ GalliumOSはintel系メインなのに対し、今回買ったやつはARMなの
 上位者は基本崩れない。身勝手に打たない。
 小手打ちが崩れてるかも。いいタイミングの出小手が鍔元に当たった。下手。基本通りにまっすぐ打つ。
 突きを打つ時、右足の親指を袴の左の裾に引っ掛けた。足を継いでるかも。</description>
-    </item>
-    
-    <item>
-      <title>上手く行かない</title>
-      <link>https://mitshoji.github.io/mitstream/blog/didntgowell/</link>
-      <pubDate>Wed, 01 Aug 2018 22:17:28 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/didntgowell/</guid>
-      <description>#ブログ立ち上げ中
-Hugo + GitHub の環境でブログを立ち上げようとしているが、アップロードが上手く行かない。GitHub側の設定も色々とあるようだ。調べて整理する必要がある。 ブランチの概念がよくわからん。</description>
     </item>
     
     <item>
@@ -268,7 +160,7 @@ Hugo + GitHub の環境でブログを立ち上げようとしているが、ア
       <guid>https://mitshoji.github.io/mitstream/about/</guid>
       <description>自己紹介 mitstream:剣道して数学するおじさん。
 40歳は二度目のハタチ
-座右の銘 三度炊く飯さえ硬し軟かし 思うままにはならぬ世の中</description>
+mathmond とは 数学問答。日常生活、特に息子との会話の中で気になったことを数学のネタにしてみます。</description>
     </item>
     
   </channel>
