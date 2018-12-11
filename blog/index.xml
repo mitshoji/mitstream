@@ -6,15 +6,34 @@
     <description>Recent content in Blogs on mathmond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 18 Aug 2018 22:03:49 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 23:49:23 +0900</lastBuildDate>
     
 	<atom:link href="https://mitshoji.github.io/mitstream/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>ともだち 2018.08.19</title>
+      <title>3人勝ち抜き戦</title>
+      <link>https://mitshoji.github.io/mitstream/blog/threewinsplayer/</link>
+      <pubDate>Mon, 10 Dec 2018 23:49:23 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/threewinsplayer/</guid>
+      <description>子供の剣道の試合を見ていて気になったことを計算してみました。全ての試合の勝率を五分と仮定しているので、剣道というよりはジャンケンの話になってしまうかも知れません…。
+3人勝ち抜き戦で何人が金メダルをもらえるのか？</description>
+    </item>
+    
+    <item>
+      <title>はじめる</title>
+      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
+      <pubDate>Wed, 05 Dec 2018 22:44:40 +0900</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
+      <description>日記を書こうと思います。</description>
+    </item>
+    
+    <item>
+      <title>ともだち</title>
       <link>https://mitshoji.github.io/mitstream/blog/20180819_diary/</link>
-      <pubDate>Sat, 18 Aug 2018 22:03:49 +0900</pubDate>
+      <pubDate>Wed, 05 Dec 2018 22:22:49 +0900</pubDate>
       
       <guid>https://mitshoji.github.io/mitstream/blog/20180819_diary/</guid>
       <description>今日も一日巧太郎と二人きり。朝は稽古。グズグズ過ぎて久しぶりに怒る。怒ったあとはちゃんとするんだからなぁ。。。昼は巧太郎のリクエストで「辛い焼きそば」。冷蔵庫に野菜が全くなかったので、鶏ももとネギを使ってペペロンチーノの要領で塩焼きそば。美味しかったけど、巧太郎には少し辛すぎたようで、珍しく残す。調度良い糖質制限になったか。夜は残った鶏ももを照り焼きにしてあげた。
@@ -23,15 +42,6 @@
 友達になって欲しいからって、無理して相手に合わせるようなことをしてはダメ。それは強い者に媚びるのと同じで、自分の気持ちを利用されるだけ。自分は自分のままでいて、それでも自分を好きでいてくれる人が必ず現れるから、それまでは友達がいなくても気にせず待っていなさい。
 いつか分かる日が来ると思う。
 人生は短い。自分を離れていく人を追いかける時間なんかないんだ。</description>
-    </item>
-    
-    <item>
-      <title>はじめる</title>
-      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
-      <pubDate>Tue, 31 Jul 2018 22:44:40 +0900</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
-      <description>日記を書こうと思います。</description>
     </item>
     
   </channel>
