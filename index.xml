@@ -32,6 +32,15 @@
     </item>
     
     <item>
+      <title>はじめる</title>
+      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
+      <pubDate>Wed, 05 Dec 2018 15:12:12 +0000</pubDate>
+      
+      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
+      <description>サイトを始めようと思います。</description>
+    </item>
+    
+    <item>
       <title>本日の稽古-2018.08.23</title>
       <link>https://mitshoji.github.io/mitstream/sword/20180823_keiko/</link>
       <pubDate>Sat, 25 Aug 2018 06:47:23 +0900</pubDate>
@@ -148,15 +157,6 @@
       <description>自己紹介 mitstream:剣道して数学するおじさん。
 40歳は二度目のハタチ
 mathmond とは 数学問答。日常生活、特に息子との会話の中で気になったことを数学のネタにしてみます。</description>
-    </item>
-    
-    <item>
-      <title>はじめる</title>
-      <link>https://mitshoji.github.io/mitstream/blog/hello/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mitshoji.github.io/mitstream/blog/hello/</guid>
-      <description>サイトを始めようと思います。</description>
     </item>
     
   </channel>
